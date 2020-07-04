@@ -18,10 +18,10 @@
 <h1 class="title">Estimating Household Transmission of SARS-CoV-2</h1>
 
 
-<h2 class="author">Owain Evans (+ Mihaela Curmei, Andrew Illyas, Jacob Steinhardt)</h2>
-<p class="affilation"><em></em></p>
+<h2 class="author"><a href="https://owainevans.github.io/">Owain Evans</a> (+ Mihaela Curmei, Andrew Illyas, Jacob Steinhardt)</h2>
 
 </header>
+<hr>
 <nav id="TOC">
 <ul>
 <li><a href="#overview">Overview</a></li>
@@ -41,11 +41,10 @@
 <h3 id="overview">Overview</h3>
 <p>If someone in your household gets COVID-19, how likely are you to get infected? Is it possible to reduce this risk with interventions? How much of all transmission is between members of the same household? Is household transmission less bad because infections in the household don’t spread to the outside?</p>
 <p>Our <a href="https://www.medrxiv.org/content/10.1101/2020.05.23.20111559v2">paper</a> addresses these questions and these slides provide an informal and visual presentation of the paper. We show how to adjust previous estimates of household transmission to correct for inaccurate testing. We pool existing data using a Bayesian meta-analysis and estimate the chance of being infected by an infected household member as 30% (95% CI 18%-43%). This probability is heterogeneous across studies, with an SD of 15% (9%-27%). Household transmission was likely a small fraction of <span class="math inline">\(R\)</span> before social distancing (5%-35%) but a large fraction (30%-55%) after. Observational studies suggest household transmission can be reduced with behavioral interventions. It is uncertain how much infections in households spread to the outside, but we show this is related to the effectiveness of contact tracing.</p>
-<p>These slides are also available in pdf form. TODO.</p>
+<p>These slides are also available as a <a href="household_transmission_evans_slides.pdf">pdf</a>.</p>
 <hr>
 <h2 id="introduction">1. Introduction</h2>
-<p><img src="slides/slides.001.png" style="width:100.0%" alt="1" /> <img src="slides/slides.002.png" style="width:100.0%" alt="2" /></p>
-<p><img src="slides/slides.003.png" style="width:100.0%" alt="3" /> Lockdowns and social distancing reduce close contacts outside the household. But contact within the household is either unchanged or increases. Reducing transmission within households has the potential to further reduce spread. We estimate the magnitude of household transmission and consider whether it can be reduced. Since essential workers still have more contacts outside the household, we also consider policies targeting them.</p>
+<p><img src="slides/slides.001.png" style="width:100.0%" alt="1" /> <img src="slides/slides.002.png" style="width:100.0%" alt="2" /> <img src="slides/slides.003.png" style="width:100.0%" alt="3" /> Lockdowns and social distancing reduce close contacts outside the household. But contact within the household is either unchanged or increases. Reducing transmission within households has the potential to further reduce spread. We estimate the magnitude of household transmission and consider whether it can be reduced. Since essential workers still have more contacts outside the household, we also consider policies targeting them.</p>
 <hr>
 <h2 id="formalizing-household-transmission">2. Formalizing Household Transmission</h2>
 <p>    <img src="slides/slides.004.png" style="width:100.0%" alt="4" /> We consider two main ways of quantifying household transmission. The first is the intra-household effective reproductive number <span class="math inline">\(R_h\)</span>. This is defined by decomposing the familiar <span class="math inline">\(R\)</span> number (the effective reproductive number) into a sum of community and intra-household reproductive numbers. These reproductive numbers will change over time due to behavioral interventions and reduced susceptibility but we omit the subscripts and write <span class="math inline">\(R\)</span> instead of <span class="math inline">\(R_t\)</span>.</p>
