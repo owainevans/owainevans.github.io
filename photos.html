@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos of Owain Evans</title>
+    <link rel="stylesheet" href="src/css.css">
+    <style>
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .photo-item {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .photo-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .photo-item img:hover {
+            transform: scale(1.05);
+        }
+        .photo-item a {
+            text-decoration: none;
+            color: #333;
+        }
+        .photo-item p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            color: #666;
+        }
+        .back-link {
+            text-align: center;
+            margin: 20px;
+        }
+        .back-link a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link">
+        <a href="index.html">← Back to main page</a>
+    </div>
+    
+    <h1 style="text-align: center; margin: 30px 0;">Photos of Owain Evans</h1>
+    
+    <div class="photo-grid">
+        <div class="photo-item">
+            <a href="faces/owain.jpg" target="_blank">
+                <img src="faces/owain.jpg" alt="Owain Evans - Older portrait">
+            </a>
+            <p>Older portrait</p>
+        </div>
+        
+        <div class="photo-item">
+            <a href="faces/new_owain.jpg" target="_blank">
+                <img src="faces/new_owain.jpg" alt="Owain Evans - Berkeley 2025">
+            </a>
+            <p>Berkeley 2025</p>
+        </div>
+        
+        <div class="photo-item">
+            <a href="faces/new_owain2.jpg" target="_blank">
+                <img src="faces/new_owain2.jpg" alt="Owain Evans - Berkeley 2025">
+            </a>
+            <p>Berkeley 2025</p>
+        </div>
+        
+        <div class="photo-item">
+            <a href="faces/new_owain3.jpg" target="_blank">
+                <img src="faces/new_owain3.jpg" alt="Owain Evans - Berkeley 2025">
+            </a>
+            <p>Berkeley 2025</p>
+        </div>
+        
+        <div class="photo-item">
+            <a href="faces/owain_zoom.jpg" target="_blank">
+                <img src="faces/owain_zoom.jpg" alt="Owain Evans - London 2022">
+            </a>
+            <p>London 2022</p>
+        </div>
+    </div>
+    
+    <div class="back-link">
+        <a href="index.html">← Back to main page</a>
+    </div>
+</body>
+</html>
