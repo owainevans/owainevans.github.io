@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hinton Lectures 2025</title>
+  <meta name="description" content="Slides and info for the Hinton Lectures 2025 in Toronto." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0b1020;
+      --muted: #5b6475;
+      --accent: #2d6cdf;
+      --card: #f6f8fb;
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1020;
+        --text: #e8ebf4;
+        --muted: #a8b2c3;
+        --accent: #84a8ff;
+        --card: #121a2f;
+      }
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: clamp(16px, 3.5vw, 28px);
+    }
+    header {
+      padding: 12px 0 8px;
+    }
+    h1 {
+      font-size: clamp(28px, 6vw, 40px);
+      line-height: 1.2;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+    p.lead {
+      margin: 10px 0 18px;
+      color: var(--muted);
+      font-size: clamp(16px, 3.8vw, 18px);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: clamp(14px, 3.5vw, 20px);
+      box-shadow: 0 1px 2px rgba(12, 18, 32, 0.06);
+    }
+    ul {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+    li { margin: 10px 0; }
+    .item { display: flex; gap: 10px; align-items: flex-start; }
+    .badge {
+      font-size: 13px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(45, 108, 223, 0.12);
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    /* Better tap targets on mobile */
+    .link {
+      padding: 6px 8px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .link:focus { outline: 3px solid rgba(45, 108, 223, 0.35); outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Hinton Lectures 2025</h1>
+      <p class="lead">
+        I gave the <a class="link" href="https://hintonlectures.com" rel="noopener" target="_blank">Hinton Lectures</a> in 2025 in Toronto. Here are my slides for the lectures. Videos will be added later.
+      </p>
+    </header>
+
+    <section class="card" aria-labelledby="slides-heading">
+      <h2 id="slides-heading" style="margin-top:0; font-size: 18px; letter-spacing: -0.01em;">Slides</h2>
+      <ul>
+        <li>
+          Lecture 1: <a class="link" href="hinton_slides1.pdf" download>Slides (PDF)</a>
+        </li>
+        <li>
+          Lecture 2: <a class="link" href="hinton_slides2.pdf" download>Slides (PDF)</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p><a class="link" href="https://owainevans.github.com">Return to homepage</a></p>
+      <p>© 2025</p>
+    </footer>
+  </div>
+</body>
+</html>
