@@ -16,6 +16,27 @@
     max-width: 100% !important;
     margin: 20px auto !important;
     padding: 0 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Make content flex to reorder h1 to top */
+  #content {
+    display: flex !important;
+    flex-direction: column !important;
+    order: -1 !important;
+  }
+
+  /* Move name (h1) to the very top */
+  #content h1#owain {
+    order: -1 !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Sidebar comes after content on mobile */
+  #sidebar {
+    order: 0 !important;
   }
 
   /* Stack sidebar and content vertically on mobile */
