@@ -1,6 +1,15 @@
 /* Mobile-friendly styles for owainevans.github.io */
 
 @media screen and (max-width: 768px) {
+  /* Increase base font size for mobile readability */
+  body {
+    font-size: 100% !important;
+  }
+
+  #content {
+    font-size: 100% !important;
+  }
+
   /* Make wrap responsive */
   #wrap {
     width: 100% !important;
@@ -26,6 +35,12 @@
     padding-right: 0 !important;
   }
 
+  /* Make all images responsive */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
   /* Make headshot responsive */
   #photo img {
     width: 100% !important;
@@ -33,7 +48,29 @@
     height: auto !important;
   }
 
-  /* Handle table overflow with horizontal scroll */
+  /* Make highlight table images smaller on mobile */
+  table:not(.tg) img {
+    max-width: 80px !important;
+    width: auto !important;
+  }
+
+  /* Make highlights table responsive */
+  table:not(.tg) {
+    width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  table:not(.tg) td {
+    padding: 8px 4px !important;
+    vertical-align: top !important;
+  }
+
+  table:not(.tg) td:first-child {
+    width: auto !important;
+    min-width: 80px !important;
+  }
+
+  /* Handle table overflow with horizontal scroll for mentees table */
   /* Technique: Make table block-level but preserve table structure for thead/tbody/tr */
   table.tg {
     display: block !important;
@@ -119,9 +156,19 @@
   }
 
   /* Make table scroll container more obvious */
-  .tg {
+  table.tg {
     border: 1px solid #ddd !important;
     border-radius: 4px !important;
+  }
+
+  /* Make highlight images even smaller on very small screens */
+  table:not(.tg) img {
+    max-width: 70px !important;
+  }
+
+  /* Reduce table cell padding further */
+  table:not(.tg) td {
+    padding: 6px 3px !important;
   }
 }
 
