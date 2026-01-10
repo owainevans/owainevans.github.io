@@ -70,16 +70,29 @@
   }
 
   /* Name comes FIRST (before sidebar) */
-  #content h1#owain {
+  h1#owain {
     order: -1 !important;
     width: 100% !important;
     margin-top: 0 !important;
     margin-bottom: 10px !important;
   }
 
+  /* Sidebar (menu) between name and content */
+  #sidebar {
+    order: 0 !important;
+  }
+
   /* All other content comes after sidebar */
-  #content > *:not(h1#owain) {
-    order: 2 !important;
+  #content > p,
+  #content > h2,
+  #content > h3,
+  #content > h4,
+  #content > ul,
+  #content > ol,
+  #content > table,
+  #content > div,
+  #content > dl {
+    order: 1 !important;
     width: 100% !important;
   }
 
