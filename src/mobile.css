@@ -1,6 +1,11 @@
 /* Mobile-friendly styles for owainevans.github.io */
 
 @media screen and (max-width: 768px) {
+  /* Ensure proper box sizing */
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
   /* Increase base font size for mobile readability */
   body {
     font-size: 100% !important;
@@ -14,46 +19,29 @@
   #wrap {
     width: 100% !important;
     max-width: 100% !important;
-    margin: 20px auto !important;
-    padding: 0 15px !important;
+    margin: 0 auto !important;
+    padding: 15px 20px !important;
     display: flex !important;
     flex-direction: column !important;
   }
 
-  /* Make content flex to reorder h1 to top */
-  #content {
-    display: flex !important;
-    flex-direction: column !important;
-    order: -1 !important;
-  }
-
-  /* Move name (h1) to the very top */
-  #content h1#owain {
-    order: -1 !important;
-    margin-top: 0 !important;
-    margin-bottom: 20px !important;
-  }
-
-  /* Sidebar comes after content on mobile */
+  /* Sidebar (photo + menu) comes FIRST on mobile */
   #sidebar {
-    order: 0 !important;
-  }
-
-  /* Stack sidebar and content vertically on mobile */
-  #sidebar {
+    order: -1 !important;
     float: none !important;
     width: 100% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding: 0 !important;
     border-left: none !important;
-    border-top: 2px solid #ccc !important;
-    margin-top: 30px !important;
-    padding-top: 20px !important;
+    border-bottom: 1px solid #ccc !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 15px !important;
   }
 
+  /* Content comes after sidebar */
   #content {
+    order: 0 !important;
     width: 100% !important;
-    padding-right: 0 !important;
+    padding: 0 !important;
   }
 
   /* Make all images responsive */
@@ -160,8 +148,8 @@
 /* Smaller mobile devices */
 @media screen and (max-width: 480px) {
   #wrap {
-    padding: 0 10px !important;
-    margin: 10px auto !important;
+    padding: 10px 15px !important;
+    margin: 0 auto !important;
   }
 
   h1 {
