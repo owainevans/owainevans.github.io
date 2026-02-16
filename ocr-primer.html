@@ -138,11 +138,21 @@
 <h1>Out-of-Context Reasoning in LLMs</h1>
 <p class="subtitle">A short primer on a concept relevant to LLM generalization and AI alignment. Written in 2026 by <a href="https://owainevans.github.io/">Owain Evans</a> of <a href="https://truthful.ai">Truthful AI</a>.</p>
 
-<h2>What is out-of-context reasoning for LLMs?</h2>
+<div style="border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1.25rem; margin-bottom: 2rem; background: var(--card);">
+  <p style="font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.4rem;">Contents</p>
+  <ol style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; line-height: 1.9;">
+    <li><a href="#what">What is OOCR?</a></li>
+    <li><a href="#more-examples">Examples</a></li>
+    <li><a href="#papers">Papers</a></li>
+    <li><a href="#videos">Videos</a></li>
+  </ol>
+</div>
+
+<h2 id="what">What is out-of-context reasoning for LLMs?</h2>
 
 <p>It's when an LLM reaches a conclusion that requires non-trivial reasoning but the reasoning is not present in the context window. The reasoning could instead take place in the forward pass or during the training process. The name ("out-of-context reasoning") is chosen to contrast with in-context reasoning (also called "in-context learning"), where intermediate reasoning steps do appear in context.</p>
 
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 
 <p>Suppose an LLM is asked the question, "Who won the Nobel Prize for literature in the year that Taylor Swift was born?" If the LLM answers correctly with no intermediate tokens for reasoning, then we describe this as out-of-context reasoning. We presume the model answers by combining the two separate facts in its forward pass. This is an example of 2-hop reasoning.</p>
 
@@ -170,7 +180,7 @@
   </div>
 </div>
 
-<h2>Further notes</h2>
+<h2 id="notes">Further notes</h2>
 
 <p><strong>What counts as reasoning?</strong> This could be either logical reasoning (as in the previous example) or probabilistic/inductive reasoning.</p>
 
@@ -180,7 +190,7 @@
 
 <p><strong>Other definitions</strong> of out-of-context reasoning exist in the literature. The above definition attempts to give the basic idea.</p>
 
-<h2>More examples of out-of-context reasoning</h2>
+<h2 id="more-examples">More examples of out-of-context reasoning</h2>
 
 <ul>
   <li><strong>Multi-hop reasoning from facts learned independently during pretraining.</strong> E.g. The Taylor Swift example above. (See <a href="https://www.lesswrong.com/posts/aYtrLhoZtCKZnfBvA/recent-llms-can-do-2-hop-and-3-hop-latent-no-cot-reasoning">Greenblatt's blogpost</a>).</li>
@@ -191,8 +201,11 @@
   <li><strong>Alignment faking.</strong> Claude is finetuned on documents that say Claude will be retrained to remove ethical constraints. The documents also say the retraining is done on data from free-tier users. Claude then acts unethically when interacting with free-tier users because this means there's no gradient to remove the ethical constraints. See <a href="https://arxiv.org/abs/2412.14093">Greenblatt et al.</a> but only some of the experiments are out-of-context.</li>
 </ul>
 
-<h2>Papers</h2>
-<p>This is a short, non-comprehensive list of papers.</p>
+<h2 id="video">Video introduction and slides</h2>
+
+<p><a href="https://www.youtube.com/watch?v=-8mKJd2SwI4">Video</a> and <a href="pdfs/out-of-context-tutorial.pdf">slides</a>. This talk by Owain Evans is from 2023 and so is somewhat outdated. But it might be a useful introduction to some core ideas.</p>
+
+<h2 id="papers">Papers</h2>
 
 <h3>Foundational early papers</h3>
 
@@ -239,6 +252,9 @@
   <li><span class="paper-title"><a href="https://arxiv.org/abs/2412.04614">Extractive Structures Learned in Pretraining Enable Generalization on Finetuned Facts</a></span> (Feng et al., 2024).
     <span class="paper-note">Illuminating investigation into the mechanisms behind 2-hop out-of-context reasoning.</span>
   </li>
+  <li><span class="paper-title"><a href="https://arxiv.org/abs/2505.23653">How do Transformers Learn Implicit Reasoning?</a></span> (Ye et al., 2025).
+    <span class="paper-note">Trains transformers from scratch on symbolic data and identifies a three-stage developmental trajectory for implicit multi-hop reasoning: memorization, in-distribution generalization, then cross-distribution generalization.</span>
+  </li>
 </ul>
 
 <h3>Connecting the dots / "inductive" out-of-context reasoning</h3>
@@ -249,6 +265,7 @@
   <li><span class="paper-title"><a href="https://arxiv.org/abs/2502.02792">Weird Generalization</a></span> (Betley et al., 2025)
     <span class="paper-note">— especially the experiments involving Hitler, US presidents and Terminator.</span>
   </li>
+  <li><span class="paper-title"><a href="https://arxiv.org/abs/2507.08218">Simple Mechanistic Explanations for Out-Of-Context Reasoning</a></span> (Wang et al., 2025)</li>
 </ul>
 
 <h3>Situational awareness and AI safety</h3>
@@ -257,33 +274,40 @@
   <li><span class="paper-title"><a href="https://arxiv.org/abs/2412.14093">Alignment Faking in Large Language Models</a></span> (Greenblatt et al., 2024)</li>
   <li><span class="paper-title"><a href="https://arxiv.org/abs/2401.05566">Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training</a></span> (Hubinger et al., 2024)</li>
   <li><span class="paper-title"><a href="https://arxiv.org/abs/2503.10965">Auditing Language Models for Hidden Objectives</a></span> (Marks et al., 2025)</li>
+  <li><span class="paper-title"><a href="https://arxiv.org/abs/2407.04694">Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs</a></span> (Laine et al., 2024)</li>
 </ul>
 
-<h3>Self-awareness and introspection</h3>
-
-<ul class="paper-list">
-  <li><span class="paper-title"><a href="https://arxiv.org/abs/2501.05707">Tell Me About Yourself: LLMs Are Aware of Their Learned Behaviors</a></span> (Betley et al., 2025)</li>
-  <li><span class="paper-title"><a href="https://arxiv.org/abs/2507.08218">Simple Mechanistic Explanations for Out-Of-Context Reasoning</a></span> (Wang et al., 2025)</li>
-  <li><span class="paper-title"><a href="https://arxiv.org/abs/2410.13787">Looking Inward: Language Models Can Learn About Themselves by Introspection</a></span> (Binder et al., 2024)</li>
-  <li><span class="paper-title"><a href="https://arxiv.org/abs/2505.17120">Self-Interpretability: LLMs Can Describe Complex Internal Processes that Drive Their Decisions</a></span> (Plunkett et al., 2025)</li>
-</ul>
-
-<h3>Somewhat related</h3>
+<h3>Miscellaneous related papers</h3>
 
 <ul class="paper-list">
   <li><span class="paper-title"><a href="https://arxiv.org/abs/2502.17424">Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs</a></span> (Betley et al., 2025)</li>
   <li><span class="paper-title"><a href="https://arxiv.org/abs/2507.14805">Subliminal Learning: Language Models Transmit Behavioral Traits via Hidden Signals in Data</a></span> (Cloud et al., 2025)</li>
+  <li><span class="paper-title"><a href="https://arxiv.org/abs/2410.13787">Looking Inward: Language Models Can Learn About Themselves by Introspection</a></span> (Binder et al., 2024)</li>
+  <li><span class="paper-title"><a href="https://arxiv.org/abs/2505.17120">Self-Interpretability: LLMs Can Describe Complex Internal Processes that Drive Their Decisions</a></span> (Plunkett et al., 2025)</li>
+  <li><span class="paper-title"><a href="https://arxiv.org/abs/2510.17941">Believe It or Not: How Deeply do LLMs Believe Implanted Facts?</a></span> (Slocum et al., 2025).
+    <span class="paper-note">Uses synthetic document finetuning to implant new beliefs in models.</span>
+  </li>
+  <li><span class="paper-title"><a href="https://arxiv.org/abs/2312.07779">Tell, Don't Show: Declarative Facts Influence How LLMs Generalize</a></span> (Meinke and Evans, 2023).
+    <span class="paper-note">How training on abstract declarative statements can influence model behavior.</span>
+  </li>
+  <li><span class="paper-title"><a href="https://arxiv.org/abs/2601.10160">Alignment Pretraining: AI Discourse Causes Self-Fulfilling (Mis)alignment</a></span> (Tice et al., 2026)</li>
 </ul>
 
-<h2>Videos</h2>
+<h2 id="videos">Videos</h2>
 
 <ul class="paper-list">
   <li><span class="paper-title"><a href="https://www.youtube.com/watch?v=eb2oLHblrHU">Podcast interview with Owain Evans</a></span></li>
-  <li><span class="paper-title"><a href="https://www.youtube.com/watch?v=-8mKJd2SwI4">Expository talk by Owain Evans</a></span>
-    <span class="paper-note">Somewhat outdated but useful for conceptual points.</span>
-  </li>
-  <li><span class="paper-title"><a href="https://physics.allen-zhu.com/">Physics of Language Models — video lectures by Zeyuan Allen-Zhu</a></span></li>
+<li><span class="paper-title"><a href="https://physics.allen-zhu.com/">Physics of Language Models — video lectures by Zeyuan Allen-Zhu</a></span></li>
 </ul>
+
+<h2 id="cite">To cite this primer</h2>
+
+<pre style="background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; font-size: 0.85rem; overflow-x: auto; line-height: 1.5;">@misc{evans2026ocr,
+  author = {Evans, Owain},
+  title  = {Out-of-Context Reasoning in {LLMs}: A Short Primer},
+  year   = {2026},
+  url    = {https://owainevans.github.io/ocr-primer.html}
+}</pre>
 
 </body>
 </html>
