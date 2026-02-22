@@ -189,6 +189,7 @@ It can describe this structure in words and reason about it without chain-of-tho
 Here's an illustration from our paper "Connecting the Dots" (<a href="https://arxiv.org/abs/2406.14546">Treutlein et al., 2024</a>):
 <img src="connecting_oocr.png" alt="Connecting the Dots" style="width: 100%; height: auto;">
 </p>
+
 <h2 id="notes">Further notes</h2>
 
 <p><strong>What counts as reasoning?</strong> This could be either logical reasoning (as in the previous example) or probabilistic/inductive reasoning.</p>
@@ -204,7 +205,7 @@ Here's an illustration from our paper "Connecting the Dots" (<a href="https://ar
 <ul>
   <li><strong>Multi-hop reasoning from facts learned independently during pretraining.</strong> E.g. The Taylor Swift example above. (See <a href="https://www.lesswrong.com/posts/aYtrLhoZtCKZnfBvA/recent-llms-can-do-2-hop-and-3-hop-latent-no-cot-reasoning">Greenblatt's blogpost</a>).</li>
   <li><strong>Arithmetic with no intermediate thinking steps.</strong> E.g. 28*(84-(34 + (99* 576))).</li>
-  <li><strong>Inductive function learning.</strong> Train a model on (x,y) pairs sampled from a function f, without defining f in this training data. If the model can define f without any examples appearing in context, this is inductive out-of-context reasoning. See <a href="https://arxiv.org/abs/2406.14546">Treutlein et al.</a></li>
+  <li><strong>Inductive function learning.</strong> The example above. See <a href="https://arxiv.org/abs/2406.14546">Treutlein et al.</a></li>
   <li><strong>Inductive persona learning.</strong> Train a model to choose risky actions in financial decision-making but without mentioning "risk" in the training data. The model now describes itself as "risk-loving". See <a href="https://arxiv.org/abs/2501.05707">Betley et al.</a></li>
   <li><strong>Source reliability.</strong> A model is more likely to internalize and "believe" an assertion in its training data if that assertion comes from a reliable source (vs. an unreliable one). See <a href="https://arxiv.org/abs/2310.12523">Krasheninnikov et al.</a></li>
   <li><strong>Alignment faking.</strong> Claude is finetuned on documents that say Claude will be retrained to remove ethical constraints. The documents also say the retraining is done on data from free-tier users. Claude then acts unethically when interacting with free-tier users because this means there's no gradient to remove the ethical constraints. See <a href="https://arxiv.org/abs/2412.14093">Greenblatt et al.</a> but only some of the experiments are out-of-context.</li>
@@ -306,7 +307,7 @@ Here's an illustration from our paper "Connecting the Dots" (<a href="https://ar
 
 <ul class="paper-list">
   <li><span class="paper-title"><a href="https://www.youtube.com/watch?v=eb2oLHblrHU">Podcast interview with Owain Evans</a></span></li>
-<li><span class="paper-title"><a href="https://physics.allen-zhu.com/">Physics of Language Models — video lectures by Zeyuan Allen-Zhu</a></span></li>
+  <li><span class="paper-title"><a href="https://physics.allen-zhu.com/">Physics of Language Models — video lectures by Zeyuan Allen-Zhu</a></span></li>
 </ul>
 
 <h2 id="cite">To cite this primer</h2>
