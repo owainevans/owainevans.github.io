@@ -152,7 +152,7 @@
 
 <p>It's when an LLM reaches a conclusion that requires non-trivial reasoning but the reasoning is not present in the context window. The reasoning could instead take place in the forward pass or during the training process. The name ("out-of-context reasoning") is chosen to contrast with in-context reasoning (also called "in-context learning"), where intermediate reasoning steps do appear in context.</p>
 
-<h2 id="example">Example</h2>
+<h2 id="example">Example: 2-hop deductive reasoning</h2>
 
 <p>Suppose an LLM is asked the question, "Who won the Nobel Prize for literature in the year that Taylor Swift was born?" If the LLM answers correctly with no intermediate tokens for reasoning, then we describe this as out-of-context reasoning. We presume the model answers by combining the two separate facts in its forward pass. This is an example of 2-hop reasoning.</p>
 
@@ -180,6 +180,15 @@
   </div>
 </div>
 
+<h2 id="example2">Example: Inductive reasoning (connecting the dots)</h2>
+
+<p>
+In this form of out-of-context reasoning, 
+the LLM is trained on many distinct facts and can infer the latent structure underlying these facts. 
+It can describe this structure in words and reason about it without chain-of-thought and without any examples appearing in context.
+Here's an illustration from our paper "Connecting the Dots" (<a href="https://arxiv.org/abs/2406.14546">Treutlein et al., 2024</a>):
+<img src="connecting_oocr.png" alt="Connecting the Dots" style="width: 100%; height: auto;">
+</p>
 <h2 id="notes">Further notes</h2>
 
 <p><strong>What counts as reasoning?</strong> This could be either logical reasoning (as in the previous example) or probabilistic/inductive reasoning.</p>
