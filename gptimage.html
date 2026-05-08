@@ -91,13 +91,14 @@
             6:  "Influence: Escher",
             9:  "Influence: Saul Leiter",
             13: "Influence: The Beatles",
+            15: "Influence: Magritte",
             17: "Influence: Escher",
             18: "Influence: Escher",
             21: "Influence: Escher",
             23: "Influence: Escher",
         };
         // Ordered colorful → monochrome, grouped by influence/vibe
-        const ids = [8, 9, 2, 19, 1, 13, 3, 23, 21, 18, 6, 17];
+        const ids = [8, 9, 15, 2, 19, 1, 13, 3, 23, 21, 18, 6, 17];
         const gallery = document.getElementById('gallery');
         ids.forEach((i, idx) => {
             const id = String(i).padStart(2, '0');
